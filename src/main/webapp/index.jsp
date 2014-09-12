@@ -1,26 +1,18 @@
-
-<html ng-app="commentApp">
-<head>
-<script src="js/angular.min.js"></script>
-<script src="js/comment.js"></script>
-</head>
-<body>
-	<div>
-		<label>Comments</label> <br />
-		<div ng-controller="commentController">
-			<ul>
-				<li ng-repeat="comment in comments"><input type="text"
-					ng-model="comment.text" size="80"></li>
-			</ul>
-			<form ng-submit="addComment()">
-				<input type="text" ng-model="newComment" size="80"
-					placeholder="Enter your comment"> <input class="hidden"
-					type="submit" value="add">
-			</form>
-
-			<label>{{total}} comment</label>
-		</div>
-
-	</div>
-</body>
+<!doctype html>
+<html ng-app="project">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular-resource.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular-route.min.js">
+   </script>
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/project.js"></script>
+  </head>
+  <body>
+    <h2>JavaScript Projects</h2>
+    <div ng-view></div>
+  </body>
 </html>
